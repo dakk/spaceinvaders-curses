@@ -9,7 +9,8 @@
 
 
 // Numero di nemici colpiti; se ne colpisce uno, continua ad andare,
-// al secondo nemico colpito finisce la sua esistenza
+// al secondo nemico colpito finisce la sua esistenza. Modifica apportata
+// a seguito di una richiesta del docente durante l'orale
 int hit;
 
 
