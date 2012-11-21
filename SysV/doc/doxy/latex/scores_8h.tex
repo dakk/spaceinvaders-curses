@@ -1,0 +1,104 @@
+\hypertarget{scores_8h}{
+\section{scores.h File Reference}
+\label{scores_8h}\index{scores.h@{scores.h}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{scores_8h_a22fc7b86282478be5eccc6cb7a308f83}{SCORES\_\-N\_\-MAX}~10
+\item 
+\#define \hyperlink{scores_8h_a69491fb6342cc455007905a63e7117ce}{SCORES\_\-FILE}~\char`\"{}scores.db\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{scores_8h_a85b2183da60eb79f7e83b8420c7b35f4}{scores\_\-add} (int score)
+\item 
+int \hyperlink{scores_8h_a506b4a5fd6c47b036679c8cb4528cfd3}{scores\_\-load} (int $\ast$scores)
+\item 
+int \hyperlink{scores_8h_a3deb59acdd6ec495571fae1b88811b04}{scores\_\-save} (int $\ast$scores)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gestione dei punteggi
+
+\begin{DoxyDate}{Date}
+24 November 2011 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Davide Gessa (45712) 
+\end{DoxyAuthor}
+
+
+\subsection{Define Documentation}
+\hypertarget{scores_8h_a69491fb6342cc455007905a63e7117ce}{
+\index{scores.h@{scores.h}!SCORES\_\-FILE@{SCORES\_\-FILE}}
+\index{SCORES\_\-FILE@{SCORES\_\-FILE}!scores.h@{scores.h}}
+\subsubsection[{SCORES\_\-FILE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCORES\_\-FILE~\char`\"{}scores.db\char`\"{}}}
+\label{scores_8h_a69491fb6342cc455007905a63e7117ce}
+Nome del file contenente i punteggi \hypertarget{scores_8h_a22fc7b86282478be5eccc6cb7a308f83}{
+\index{scores.h@{scores.h}!SCORES\_\-N\_\-MAX@{SCORES\_\-N\_\-MAX}}
+\index{SCORES\_\-N\_\-MAX@{SCORES\_\-N\_\-MAX}!scores.h@{scores.h}}
+\subsubsection[{SCORES\_\-N\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCORES\_\-N\_\-MAX~10}}
+\label{scores_8h_a22fc7b86282478be5eccc6cb7a308f83}
+Numero massimo di high scores memorizzati 
+
+\subsection{Function Documentation}
+\hypertarget{scores_8h_a85b2183da60eb79f7e83b8420c7b35f4}{
+\index{scores.h@{scores.h}!scores\_\-add@{scores\_\-add}}
+\index{scores\_\-add@{scores\_\-add}!scores.h@{scores.h}}
+\subsubsection[{scores\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}int scores\_\-add (
+\begin{DoxyParamCaption}
+\item[{int}]{score}
+\end{DoxyParamCaption}
+)}}
+\label{scores_8h_a85b2183da60eb79f7e83b8420c7b35f4}
+Registra un nuovo punteggio
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Punteggio da aggiungere \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Posizione in classifica (0 == high score) 
+\end{DoxyReturn}
+\hypertarget{scores_8h_a506b4a5fd6c47b036679c8cb4528cfd3}{
+\index{scores.h@{scores.h}!scores\_\-load@{scores\_\-load}}
+\index{scores\_\-load@{scores\_\-load}!scores.h@{scores.h}}
+\subsubsection[{scores\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}int scores\_\-load (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{scores}
+\end{DoxyParamCaption}
+)}}
+\label{scores_8h_a506b4a5fd6c47b036679c8cb4528cfd3}
+Carica i punteggi da file, e riempie l'array scores
+
+
+\begin{DoxyParams}{Parameters}
+{\em scores} & Array nel quale salvare i punteggi letti \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 se andato a buon fine 
+\end{DoxyReturn}
+\hypertarget{scores_8h_a3deb59acdd6ec495571fae1b88811b04}{
+\index{scores.h@{scores.h}!scores\_\-save@{scores\_\-save}}
+\index{scores\_\-save@{scores\_\-save}!scores.h@{scores.h}}
+\subsubsection[{scores\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}int scores\_\-save (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{scores}
+\end{DoxyParamCaption}
+)}}
+\label{scores_8h_a3deb59acdd6ec495571fae1b88811b04}
+Salva i punteggi nel file, prendendo i dati dall'array scores
+
+
+\begin{DoxyParams}{Parameters}
+{\em scores} & Array di punteggi da salvare nel file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 se andato a buon fine 
+\end{DoxyReturn}

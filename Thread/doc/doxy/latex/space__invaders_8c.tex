@@ -1,0 +1,132 @@
+\hypertarget{space__invaders_8c}{
+\section{space\_\-invaders.c File Reference}
+\label{space__invaders_8c}\index{space\_\-invaders.c@{space\_\-invaders.c}}
+}
+{\ttfamily \#include \char`\"{}space\_\-invaders.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{space__invaders_8c_a738c57c092eaae0b4e2e663d8cce93d5}{queue\_\-init} ()
+\item 
+void \hyperlink{space__invaders_8c_a93dbc8f6062a39203101dc052eb98c7d}{queue\_\-exit} ()
+\item 
+int \hyperlink{space__invaders_8c_a6001269bb8f8965ec01c0ccaf5445b22}{queue\_\-add} (\hyperlink{structobject__data__t}{object\_\-data\_\-t} ob)
+\item 
+int \hyperlink{space__invaders_8c_ab00e9f6a727a41c7a1d43c4675ee8b4a}{queue\_\-get\_\-first} (\hyperlink{structobject__data__t}{object\_\-data\_\-t} $\ast$ob)
+\item 
+int \hyperlink{space__invaders_8c_a9f03afc9aee30aa86bc2f3ed20db04d3}{get\_\-free\_\-object\_\-index} ()
+\item 
+\hyperlink{space__invaders_8h_a3af7baddc641a3b4f5a9189b589eccf7}{object\_\-type\_\-t} \hyperlink{space__invaders_8c_a2dab1aae11b7f4d871494d3ecc84b8f4}{get\_\-collision\_\-state} (int id)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{space__invaders_8c_ad6570e1764b144ab98b59886625f7cff}{
+\hyperlink{structobject__data__t}{object\_\-data\_\-t} \hyperlink{space__invaders_8c_ad6570e1764b144ab98b59886625f7cff}{queue} \mbox{[}QUEUE\_\-SIZE\mbox{]}}
+\label{space__invaders_8c_ad6570e1764b144ab98b59886625f7cff}
+
+\begin{DoxyCompactList}\small\item\em $>$ Buffer \item\end{DoxyCompactList}\item 
+\hypertarget{space__invaders_8c_a2392643bd8c5540aa7eec60f805540f3}{
+sem\_\-t \hyperlink{space__invaders_8c_a2392643bd8c5540aa7eec60f805540f3}{vuoti}}
+\label{space__invaders_8c_a2392643bd8c5540aa7eec60f805540f3}
+
+\begin{DoxyCompactList}\small\item\em $>$ Numero di posizioni vuote nel buffer \item\end{DoxyCompactList}\item 
+\hypertarget{space__invaders_8c_ac3a21fa0c396126a1ac4a71a067ccdbf}{
+sem\_\-t \hyperlink{space__invaders_8c_ac3a21fa0c396126a1ac4a71a067ccdbf}{occupati}}
+\label{space__invaders_8c_ac3a21fa0c396126a1ac4a71a067ccdbf}
+
+\begin{DoxyCompactList}\small\item\em $>$ Numero di numeri presenti nel buffer \item\end{DoxyCompactList}\item 
+\hypertarget{space__invaders_8c_a69dc6cbabd0ff91786e988284cd51c39}{
+sem\_\-t \hyperlink{space__invaders_8c_a69dc6cbabd0ff91786e988284cd51c39}{mutex}}
+\label{space__invaders_8c_a69dc6cbabd0ff91786e988284cd51c39}
+
+\begin{DoxyCompactList}\small\item\em $>$ Sincronizza gli accessi al buffer \item\end{DoxyCompactList}\item 
+\hypertarget{space__invaders_8c_ad13c8aa3465246aa7a78d03e701c446e}{
+int \hyperlink{space__invaders_8c_ad13c8aa3465246aa7a78d03e701c446e}{inserisci} = 0}
+\label{space__invaders_8c_ad13c8aa3465246aa7a78d03e701c446e}
+
+\begin{DoxyCompactList}\small\item\em $>$ Indice per inserire \item\end{DoxyCompactList}\item 
+\hypertarget{space__invaders_8c_ab2147256d82ad4b7fbb6b4d3ac1bf274}{
+int \hyperlink{space__invaders_8c_ab2147256d82ad4b7fbb6b4d3ac1bf274}{preleva} = 0}
+\label{space__invaders_8c_ab2147256d82ad4b7fbb6b4d3ac1bf274}
+
+\begin{DoxyCompactList}\small\item\em $>$ Indice per prelevare \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contiene le funzioni condivise dagli oggetti
+
+\begin{DoxyDate}{Date}
+24 Dicembre 2011 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Davide Gessa (45712) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{space__invaders_8c_a2dab1aae11b7f4d871494d3ecc84b8f4}{
+\index{space\_\-invaders.c@{space\_\-invaders.c}!get\_\-collision\_\-state@{get\_\-collision\_\-state}}
+\index{get\_\-collision\_\-state@{get\_\-collision\_\-state}!space_invaders.c@{space\_\-invaders.c}}
+\subsubsection[{get\_\-collision\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf object\_\-type\_\-t} get\_\-collision\_\-state (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}
+\label{space__invaders_8c_a2dab1aae11b7f4d871494d3ecc84b8f4}
+Dato l'id di un oggetto, restituisce la variabile coll e la azzera (thread\_\-safe) \hypertarget{space__invaders_8c_a9f03afc9aee30aa86bc2f3ed20db04d3}{
+\index{space\_\-invaders.c@{space\_\-invaders.c}!get\_\-free\_\-object\_\-index@{get\_\-free\_\-object\_\-index}}
+\index{get\_\-free\_\-object\_\-index@{get\_\-free\_\-object\_\-index}!space_invaders.c@{space\_\-invaders.c}}
+\subsubsection[{get\_\-free\_\-object\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}int get\_\-free\_\-object\_\-index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{space__invaders_8c_a9f03afc9aee30aa86bc2f3ed20db04d3}
+Restituisce una posizione vuota nell'array degli oggett \char`\"{}objects\char`\"{} \hypertarget{space__invaders_8c_a6001269bb8f8965ec01c0ccaf5445b22}{
+\index{space\_\-invaders.c@{space\_\-invaders.c}!queue\_\-add@{queue\_\-add}}
+\index{queue\_\-add@{queue\_\-add}!space_invaders.c@{space\_\-invaders.c}}
+\subsubsection[{queue\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}int queue\_\-add (
+\begin{DoxyParamCaption}
+\item[{{\bf object\_\-data\_\-t}}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{space__invaders_8c_a6001269bb8f8965ec01c0ccaf5445b22}
+Aggiunge un elemento alla coda di update (thread\_\-safe) \hypertarget{space__invaders_8c_a93dbc8f6062a39203101dc052eb98c7d}{
+\index{space\_\-invaders.c@{space\_\-invaders.c}!queue\_\-exit@{queue\_\-exit}}
+\index{queue\_\-exit@{queue\_\-exit}!space_invaders.c@{space\_\-invaders.c}}
+\subsubsection[{queue\_\-exit}]{\setlength{\rightskip}{0pt plus 5cm}void queue\_\-exit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{space__invaders_8c_a93dbc8f6062a39203101dc052eb98c7d}
+Libera la coda di update \hypertarget{space__invaders_8c_ab00e9f6a727a41c7a1d43c4675ee8b4a}{
+\index{space\_\-invaders.c@{space\_\-invaders.c}!queue\_\-get\_\-first@{queue\_\-get\_\-first}}
+\index{queue\_\-get\_\-first@{queue\_\-get\_\-first}!space_invaders.c@{space\_\-invaders.c}}
+\subsubsection[{queue\_\-get\_\-first}]{\setlength{\rightskip}{0pt plus 5cm}int queue\_\-get\_\-first (
+\begin{DoxyParamCaption}
+\item[{{\bf object\_\-data\_\-t} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{space__invaders_8c_ab00e9f6a727a41c7a1d43c4675ee8b4a}
+Prende il primo elemento dalla coda di update (thread\_\-safe)
+
+
+\begin{DoxyParams}{Parameters}
+{\em ob} & Oggetto da inserire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stato dell'inserimento 
+\end{DoxyReturn}
+\hypertarget{space__invaders_8c_a738c57c092eaae0b4e2e663d8cce93d5}{
+\index{space\_\-invaders.c@{space\_\-invaders.c}!queue\_\-init@{queue\_\-init}}
+\index{queue\_\-init@{queue\_\-init}!space_invaders.c@{space\_\-invaders.c}}
+\subsubsection[{queue\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void queue\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{space__invaders_8c_a738c57c092eaae0b4e2e663d8cce93d5}
+Inizializza la coda di update 

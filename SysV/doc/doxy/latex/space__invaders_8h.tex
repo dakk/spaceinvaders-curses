@@ -1,0 +1,182 @@
+\hypertarget{space__invaders_8h}{
+\section{space\_\-invaders.h File Reference}
+\label{space__invaders_8h}\index{space\_\-invaders.h@{space\_\-invaders.h}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$curses.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include $<$math.h$>$}\par
+{\ttfamily \#include $<$linux/ipc.h$>$}\par
+{\ttfamily \#include $<$linux/msg.h$>$}\par
+{\ttfamily \#include \char`\"{}control.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}space\_\-ship.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}missile.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}alien.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}bomb.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}scores.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structobject__data__t}{object\_\-data\_\-t}
+\begin{DoxyCompactList}\small\item\em $>$ Struttura contenente le informazioni relative all'oggetto \item\end{DoxyCompactList}\item 
+struct \hyperlink{structcollision__msg__t}{collision\_\-msg\_\-t}
+\begin{DoxyCompactList}\small\item\em $>$ Struttura di un messaggio contenente le info di un avvenuta collisione \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{space__invaders_8h_a3ca2ca5ab74a1a9e9bac2338ad8346f0}{
+\#define \hyperlink{space__invaders_8h_a3ca2ca5ab74a1a9e9bac2338ad8346f0}{FTOK\_\-PATH}~\char`\"{}./spaceinvaders\char`\"{}}
+\label{space__invaders_8h_a3ca2ca5ab74a1a9e9bac2338ad8346f0}
+
+\begin{DoxyCompactList}\small\item\em Ftoken path. \item\end{DoxyCompactList}\item 
+\hypertarget{space__invaders_8h_a74d61acf38517001edeb8d13c33fad05}{
+\#define \hyperlink{space__invaders_8h_a74d61acf38517001edeb8d13c33fad05}{FTOK\_\-PROJ\_\-ID}~1}
+\label{space__invaders_8h_a74d61acf38517001edeb8d13c33fad05}
+
+\begin{DoxyCompactList}\small\item\em Ftoken project. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{space__invaders_8h_a21e8f42a030f0877fc7eec1ba196e005}{FTOK\_\-PROJ\_\-ID\_\-COLL\_\-BASE}~2
+\item 
+\#define \hyperlink{space__invaders_8h_a883046b8f0d1f6368a9b9eaf5ca36af3}{COLORS}
+\item 
+\#define \hyperlink{space__invaders_8h_afa997965401af8f57189bd75ed84c3c0}{SLEEP\_\-UTIME}~80000
+\item 
+\#define \hyperlink{space__invaders_8h_aebadf8a008f708525255d252c6c26f96}{SLEEP\_\-BOMB\_\-UTIME}~100000
+\item 
+\#define \hyperlink{space__invaders_8h_a780d26e941a9fedf97dfb8234229e906}{SLEEP\_\-OVER}~1000000
+\item 
+\#define \hyperlink{space__invaders_8h_ac2c77e473888005fcde75ebe4bb53eee}{BOMB\_\-DEPLOY\_\-TIME}~100
+\item 
+\#define \hyperlink{space__invaders_8h_a79ce6b9fdf94df06424dcd0776990fc2}{SCREEN\_\-DEFAULT\_\-WIDTH}~80
+\item 
+\hypertarget{space__invaders_8h_a8c3bfbb76086204df47916fd9c2571e5}{
+\#define {\bfseries SCREEN\_\-DEFAULT\_\-HEIGHT}~40}
+\label{space__invaders_8h_a8c3bfbb76086204df47916fd9c2571e5}
+
+\item 
+\hypertarget{space__invaders_8h_ad7ff06e0a367f58784f45f9ab3a39c67}{
+\#define {\bfseries SCREEN\_\-MAX\_\-WIDTH}~80}
+\label{space__invaders_8h_ad7ff06e0a367f58784f45f9ab3a39c67}
+
+\item 
+\hypertarget{space__invaders_8h_a3982fc8b1d2ae0de14979086987085df}{
+\#define {\bfseries SCREEN\_\-MAX\_\-HEIGHT}~40}
+\label{space__invaders_8h_a3982fc8b1d2ae0de14979086987085df}
+
+\item 
+\hypertarget{space__invaders_8h_afcd7123fc9add02fc54a56218435d20a}{
+\#define {\bfseries SCREEN\_\-MIN\_\-WIDTH}~20}
+\label{space__invaders_8h_afcd7123fc9add02fc54a56218435d20a}
+
+\item 
+\hypertarget{space__invaders_8h_ac268806c7f0b9b87e1eb0172e510d6cf}{
+\#define {\bfseries SCREEN\_\-MIN\_\-HEIGHT}~10}
+\label{space__invaders_8h_ac268806c7f0b9b87e1eb0172e510d6cf}
+
+\item 
+\#define \hyperlink{space__invaders_8h_aabe334216cc3799ba39ae24a084cbe22}{OBJECTS\_\-MAX}~50
+\item 
+\#define \hyperlink{space__invaders_8h_aed17f18d7d451ab44a553d83c3211c9d}{ALIEN\_\-NUM}~4
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{space__invaders_8h_a3af7baddc641a3b4f5a9189b589eccf7}{object\_\-type\_\-t} \{ \par
+{\bfseries OT\_\-SPACESHIP}, 
+{\bfseries OT\_\-ALIEN}, 
+{\bfseries OT\_\-BOMB}, 
+{\bfseries OT\_\-MISSILE}, 
+\par
+{\bfseries OT\_\-DELETE}
+ \}
+\item 
+enum \hyperlink{space__invaders_8h_ae9ae980041e438eed7a3af43ce4e9f6b}{direction\_\-t} \{ {\bfseries LEFT}, 
+{\bfseries RIGHT}
+ \}
+\begin{DoxyCompactList}\small\item\em $>$ Direzione \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{space__invaders_8h_a599adbe412c60e0cc5abb86be7ee4507}{
+int {\bfseries SCREEN\_\-WIDTH}}
+\label{space__invaders_8h_a599adbe412c60e0cc5abb86be7ee4507}
+
+\item 
+\hypertarget{space__invaders_8h_af1c710caf1e3a9e81829078054e83799}{
+int {\bfseries SCREEN\_\-HEIGHT}}
+\label{space__invaders_8h_af1c710caf1e3a9e81829078054e83799}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definizioni globali del gioco
+
+\begin{DoxyDate}{Date}
+24 November 2011 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Davide Gessa (45712) 
+\end{DoxyAuthor}
+
+
+\subsection{Define Documentation}
+\hypertarget{space__invaders_8h_aed17f18d7d451ab44a553d83c3211c9d}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!ALIEN\_\-NUM@{ALIEN\_\-NUM}}
+\index{ALIEN\_\-NUM@{ALIEN\_\-NUM}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{ALIEN\_\-NUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define ALIEN\_\-NUM~4}}
+\label{space__invaders_8h_aed17f18d7d451ab44a553d83c3211c9d}
+Numero delle navicelle aliene \hypertarget{space__invaders_8h_ac2c77e473888005fcde75ebe4bb53eee}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!BOMB\_\-DEPLOY\_\-TIME@{BOMB\_\-DEPLOY\_\-TIME}}
+\index{BOMB\_\-DEPLOY\_\-TIME@{BOMB\_\-DEPLOY\_\-TIME}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{BOMB\_\-DEPLOY\_\-TIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define BOMB\_\-DEPLOY\_\-TIME~100}}
+\label{space__invaders_8h_ac2c77e473888005fcde75ebe4bb53eee}
+Tempo di attesa per il lancio di una bomba (iterazioni) \hypertarget{space__invaders_8h_a883046b8f0d1f6368a9b9eaf5ca36af3}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!COLORS@{COLORS}}
+\index{COLORS@{COLORS}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{COLORS}]{\setlength{\rightskip}{0pt plus 5cm}\#define COLORS}}
+\label{space__invaders_8h_a883046b8f0d1f6368a9b9eaf5ca36af3}
+Attivo i messaggi di debug Attiva i colori \hypertarget{space__invaders_8h_a21e8f42a030f0877fc7eec1ba196e005}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!FTOK\_\-PROJ\_\-ID\_\-COLL\_\-BASE@{FTOK\_\-PROJ\_\-ID\_\-COLL\_\-BASE}}
+\index{FTOK\_\-PROJ\_\-ID\_\-COLL\_\-BASE@{FTOK\_\-PROJ\_\-ID\_\-COLL\_\-BASE}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{FTOK\_\-PROJ\_\-ID\_\-COLL\_\-BASE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FTOK\_\-PROJ\_\-ID\_\-COLL\_\-BASE~2}}
+\label{space__invaders_8h_a21e8f42a030f0877fc7eec1ba196e005}
+Ftoken project id di base utilizzato per le code dei messaggi per le collisioni degli oggetti \hypertarget{space__invaders_8h_aabe334216cc3799ba39ae24a084cbe22}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!OBJECTS\_\-MAX@{OBJECTS\_\-MAX}}
+\index{OBJECTS\_\-MAX@{OBJECTS\_\-MAX}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{OBJECTS\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define OBJECTS\_\-MAX~50}}
+\label{space__invaders_8h_aabe334216cc3799ba39ae24a084cbe22}
+Numero massimo di oggetti nella scena \hypertarget{space__invaders_8h_a79ce6b9fdf94df06424dcd0776990fc2}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!SCREEN\_\-DEFAULT\_\-WIDTH@{SCREEN\_\-DEFAULT\_\-WIDTH}}
+\index{SCREEN\_\-DEFAULT\_\-WIDTH@{SCREEN\_\-DEFAULT\_\-WIDTH}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{SCREEN\_\-DEFAULT\_\-WIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCREEN\_\-DEFAULT\_\-WIDTH~80}}
+\label{space__invaders_8h_a79ce6b9fdf94df06424dcd0776990fc2}
+Dimensione del terminale \hypertarget{space__invaders_8h_aebadf8a008f708525255d252c6c26f96}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!SLEEP\_\-BOMB\_\-UTIME@{SLEEP\_\-BOMB\_\-UTIME}}
+\index{SLEEP\_\-BOMB\_\-UTIME@{SLEEP\_\-BOMB\_\-UTIME}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{SLEEP\_\-BOMB\_\-UTIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define SLEEP\_\-BOMB\_\-UTIME~100000}}
+\label{space__invaders_8h_aebadf8a008f708525255d252c6c26f96}
+Tempo di attesa tra le varie iterazioni delle bombe aliene \hypertarget{space__invaders_8h_a780d26e941a9fedf97dfb8234229e906}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!SLEEP\_\-OVER@{SLEEP\_\-OVER}}
+\index{SLEEP\_\-OVER@{SLEEP\_\-OVER}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{SLEEP\_\-OVER}]{\setlength{\rightskip}{0pt plus 5cm}\#define SLEEP\_\-OVER~1000000}}
+\label{space__invaders_8h_a780d26e941a9fedf97dfb8234229e906}
+Tempo di attesa tra la perdita ed il messaggio di gameover \hypertarget{space__invaders_8h_afa997965401af8f57189bd75ed84c3c0}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!SLEEP\_\-UTIME@{SLEEP\_\-UTIME}}
+\index{SLEEP\_\-UTIME@{SLEEP\_\-UTIME}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{SLEEP\_\-UTIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define SLEEP\_\-UTIME~80000}}
+\label{space__invaders_8h_afa997965401af8f57189bd75ed84c3c0}
+Tempo di attesa tra le varie iterazioni 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{space__invaders_8h_a3af7baddc641a3b4f5a9189b589eccf7}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!object\_\-type\_\-t@{object\_\-type\_\-t}}
+\index{object\_\-type\_\-t@{object\_\-type\_\-t}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{object\_\-type\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf object\_\-type\_\-t}}}
+\label{space__invaders_8h_a3af7baddc641a3b4f5a9189b589eccf7}
+Tipi di oggetto presenti nel gioco
+
+OT\_\-DELETE indica al controllo che l'oggetto sta' morendo, e deve essere solo cancellato dallo schermo e non stampato 

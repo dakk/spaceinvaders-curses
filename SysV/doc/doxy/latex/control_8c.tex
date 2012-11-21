@@ -1,0 +1,52 @@
+\hypertarget{control_8c}{
+\section{control.c File Reference}
+\label{control_8c}\index{control.c@{control.c}}
+}
+{\ttfamily \#include \char`\"{}control.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}utility.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{control_8c_ad5a958421a9c1803e77d9df26faf010d}{control\_\-task} ()
+\item 
+int \hyperlink{control_8c_a0e5363a953ac899646753f3c98cde5bf}{control\_\-check\_\-collision} (\hyperlink{structobject__data__t}{object\_\-data\_\-t} $\ast$object, \hyperlink{structobject__data__t}{object\_\-data\_\-t} $\ast$current)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funzioni di controllo delle iterazioni tra gli oggetti e rendering
+
+\begin{DoxyDate}{Date}
+24 November 2011 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Davide Gessa (45712) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{control_8c_a0e5363a953ac899646753f3c98cde5bf}{
+\index{control.c@{control.c}!control\_\-check\_\-collision@{control\_\-check\_\-collision}}
+\index{control\_\-check\_\-collision@{control\_\-check\_\-collision}!control.c@{control.c}}
+\subsubsection[{control\_\-check\_\-collision}]{\setlength{\rightskip}{0pt plus 5cm}int control\_\-check\_\-collision (
+\begin{DoxyParamCaption}
+\item[{{\bf object\_\-data\_\-t} $\ast$}]{object, }
+\item[{{\bf object\_\-data\_\-t} $\ast$}]{current}
+\end{DoxyParamCaption}
+)}}
+\label{control_8c_a0e5363a953ac899646753f3c98cde5bf}
+Funzione che controlla se current e' in collissione con l'oggetto object
+
+\begin{DoxyReturn}{Returns}
+1 se vero 
+\end{DoxyReturn}
+\hypertarget{control_8c_ad5a958421a9c1803e77d9df26faf010d}{
+\index{control.c@{control.c}!control\_\-task@{control\_\-task}}
+\index{control\_\-task@{control\_\-task}!control.c@{control.c}}
+\subsubsection[{control\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void control\_\-task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{control_8c_ad5a958421a9c1803e77d9df26faf010d}
+Funzione di rendering e gestione delle iterazioni tra gli oggetti della scena 
