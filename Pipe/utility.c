@@ -21,6 +21,7 @@ long timevaldiff(struct timeval *t1, struct timeval *t2)
 	long msec;
 	msec = (t2->tv_sec - t1->tv_sec) * 1000;
 	msec += (t2->tv_usec - t1->tv_usec) / 1000;
+	
 	return msec;
 }
 
