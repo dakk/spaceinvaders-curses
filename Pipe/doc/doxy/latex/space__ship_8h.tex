@@ -1,0 +1,88 @@
+\hypertarget{space__ship_8h}{
+\section{space\_\-ship.h File Reference}
+\label{space__ship_8h}\index{space\_\-ship.h@{space\_\-ship.h}}
+}
+{\ttfamily \#include \char`\"{}space\_\-invaders.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{space__ship_8h_ac530711f1bc0575f2baef1118f6f4219}{
+\#define \hyperlink{space__ship_8h_ac530711f1bc0575f2baef1118f6f4219}{KEYCODE\_\-UP}~65}
+\label{space__ship_8h_ac530711f1bc0575f2baef1118f6f4219}
+
+\begin{DoxyCompactList}\small\item\em Freccia su (dev'essere SPACE!!) \item\end{DoxyCompactList}\item 
+\hypertarget{space__ship_8h_aa3acf65701ff877e76cc83ebec62f917}{
+\#define \hyperlink{space__ship_8h_aa3acf65701ff877e76cc83ebec62f917}{KEYCODE\_\-LEFT}~68}
+\label{space__ship_8h_aa3acf65701ff877e76cc83ebec62f917}
+
+\begin{DoxyCompactList}\small\item\em Freccia sinsitra. \item\end{DoxyCompactList}\item 
+\hypertarget{space__ship_8h_a67fbb51c362bf8f817f69c7cd2ed670f}{
+\#define \hyperlink{space__ship_8h_a67fbb51c362bf8f817f69c7cd2ed670f}{KEYCODE\_\-RIGHT}~67}
+\label{space__ship_8h_a67fbb51c362bf8f817f69c7cd2ed670f}
+
+\begin{DoxyCompactList}\small\item\em Freccia destra. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{space__ship_8h_a5d738b60507e067d2304082ac2b8ddcd}{SPACE\_\-SHIP\_\-START\_\-X}~(SCREEN\_\-WIDTH / 2)
+\item 
+\hypertarget{space__ship_8h_a80d4c23a1d242d914930b2006210c3f7}{
+\#define {\bfseries SPACE\_\-SHIP\_\-START\_\-Y}~(SCREEN\_\-HEIGHT -\/ 5)}
+\label{space__ship_8h_a80d4c23a1d242d914930b2006210c3f7}
+
+\item 
+\hypertarget{space__ship_8h_abf2782f5770791208ea5c76d32bfce1d}{
+\#define {\bfseries SPACE\_\-SHIP\_\-SIZE}~5}
+\label{space__ship_8h_abf2782f5770791208ea5c76d32bfce1d}
+
+\item 
+\hypertarget{space__ship_8h_a53851169a4e49c13213b9f568c6b28fd}{
+\#define \hyperlink{space__ship_8h_a53851169a4e49c13213b9f568c6b28fd}{SPACE\_\-SHIP\_\-LIFES}~1}
+\label{space__ship_8h_a53851169a4e49c13213b9f568c6b28fd}
+
+\begin{DoxyCompactList}\small\item\em $>$ Numero di volte che puo' esser colpita la navicella prima di morire \item\end{DoxyCompactList}\item 
+\hypertarget{space__ship_8h_ac1fef20a25b2b4177f032552a338ac3a}{
+\#define \hyperlink{space__ship_8h_ac1fef20a25b2b4177f032552a338ac3a}{SPACE\_\-SHIP\_\-SHOOT\_\-DISTANCE}~400}
+\label{space__ship_8h_ac1fef20a25b2b4177f032552a338ac3a}
+
+\begin{DoxyCompactList}\small\item\em $>$ Tempo di attesa tra uno sparo e l'altro \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{space__ship_8h_a92c8e11ed79705722671eee9c76570d4}{space\_\-ship\_\-task} (int pipe\_\-out)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Astronave
+
+\begin{DoxyDate}{Date}
+24 November 2011 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Davide Gessa (45712) 
+\end{DoxyAuthor}
+
+
+\subsection{Define Documentation}
+\hypertarget{space__ship_8h_a5d738b60507e067d2304082ac2b8ddcd}{
+\index{space\_\-ship.h@{space\_\-ship.h}!SPACE\_\-SHIP\_\-START\_\-X@{SPACE\_\-SHIP\_\-START\_\-X}}
+\index{SPACE\_\-SHIP\_\-START\_\-X@{SPACE\_\-SHIP\_\-START\_\-X}!space_ship.h@{space\_\-ship.h}}
+\subsubsection[{SPACE\_\-SHIP\_\-START\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPACE\_\-SHIP\_\-START\_\-X~(SCREEN\_\-WIDTH / 2)}}
+\label{space__ship_8h_a5d738b60507e067d2304082ac2b8ddcd}
+Posizione iniziale (x,y) e dimensione della navicella 
+
+\subsection{Function Documentation}
+\hypertarget{space__ship_8h_a92c8e11ed79705722671eee9c76570d4}{
+\index{space\_\-ship.h@{space\_\-ship.h}!space\_\-ship\_\-task@{space\_\-ship\_\-task}}
+\index{space\_\-ship\_\-task@{space\_\-ship\_\-task}!space_ship.h@{space\_\-ship.h}}
+\subsubsection[{space\_\-ship\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void space\_\-ship\_\-task (
+\begin{DoxyParamCaption}
+\item[{int}]{pipe\_\-out}
+\end{DoxyParamCaption}
+)}}
+\label{space__ship_8h_a92c8e11ed79705722671eee9c76570d4}
+Funzione di gestione della spaceship guidata dall'utente
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipe\_\-out} & Pipe nella quale scrivere le informazioni della navicella \\
+\hline
+\end{DoxyParams}

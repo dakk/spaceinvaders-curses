@@ -1,0 +1,98 @@
+\hypertarget{utility_8c}{
+\section{utility.c File Reference}
+\label{utility_8c}\index{utility.c@{utility.c}}
+}
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include \char`\"{}utility.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{utility_8c_ab5fa01c35f2593a9e5a074fc0fcf65bd}{timevaldiff} (struct timeval $\ast$t1, struct timeval $\ast$t2)
+\item 
+void \hyperlink{utility_8c_aa628a03dde2a8addd6846ee0a4540514}{render\_\-string\_\-array} (int x, int y, const char $\ast$data\mbox{[}$\,$\mbox{]}, int size)
+\item 
+void \hyperlink{utility_8c_af4f25a868fae8614f64ede31ca3cb261}{clear\_\-quad} (int x, int y, int size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funzioni varie utili nel programma
+
+\begin{DoxyDate}{Date}
+30 November 2011 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Davide Gessa (45712) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{utility_8c_af4f25a868fae8614f64ede31ca3cb261}{
+\index{utility.c@{utility.c}!clear\_\-quad@{clear\_\-quad}}
+\index{clear\_\-quad@{clear\_\-quad}!utility.c@{utility.c}}
+\subsubsection[{clear\_\-quad}]{\setlength{\rightskip}{0pt plus 5cm}void clear\_\-quad (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{utility_8c_af4f25a868fae8614f64ede31ca3cb261}
+Pulisce una parte quadrata dello schermo, di dimensione size
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Posizione x \\
+\hline
+{\em y} & Posizione y \\
+\hline
+{\em size} & Dimensione oggetto \\
+\hline
+\end{DoxyParams}
+\hypertarget{utility_8c_aa628a03dde2a8addd6846ee0a4540514}{
+\index{utility.c@{utility.c}!render\_\-string\_\-array@{render\_\-string\_\-array}}
+\index{render\_\-string\_\-array@{render\_\-string\_\-array}!utility.c@{utility.c}}
+\subsubsection[{render\_\-string\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}void render\_\-string\_\-array (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{const char $\ast$}]{data\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{utility_8c_aa628a03dde2a8addd6846ee0a4540514}
+Renderizza un array di stringhe ad una posizione prefissata
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Posizione x \\
+\hline
+{\em y} & Posizione y \\
+\hline
+{\em data} & Array di stringhe \\
+\hline
+{\em size} & Numero di righe \\
+\hline
+\end{DoxyParams}
+\hypertarget{utility_8c_ab5fa01c35f2593a9e5a074fc0fcf65bd}{
+\index{utility.c@{utility.c}!timevaldiff@{timevaldiff}}
+\index{timevaldiff@{timevaldiff}!utility.c@{utility.c}}
+\subsubsection[{timevaldiff}]{\setlength{\rightskip}{0pt plus 5cm}long timevaldiff (
+\begin{DoxyParamCaption}
+\item[{struct timeval $\ast$}]{t1, }
+\item[{struct timeval $\ast$}]{t2}
+\end{DoxyParamCaption}
+)}}
+\label{utility_8c_ab5fa01c35f2593a9e5a074fc0fcf65bd}
+Calcolo la differenza in msec tra due timeval struct
+
+
+\begin{DoxyParams}{Parameters}
+{\em t1} & tempo iniziale \\
+\hline
+{\em t2} & tempo finale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+differenza in msecondi 
+\end{DoxyReturn}

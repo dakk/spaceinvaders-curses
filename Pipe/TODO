@@ -1,0 +1,5 @@
+* Trovate un algoritmo di collision detecting adatto alla situazione
+* Trovare un altro modo per killare gli oggetti fuori dalle coordinate,
+	che non sia un doppio controllo o una kill, la kill non va'
+* Controllo spazio delle PIPE (piena/vuota) e gestione eventuale
+* Schermata nuova partita / highscores / esci

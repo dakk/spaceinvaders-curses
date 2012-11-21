@@ -1,0 +1,113 @@
+\hypertarget{space__invaders_8h}{
+\section{space\_\-invaders.h File Reference}
+\label{space__invaders_8h}\index{space\_\-invaders.h@{space\_\-invaders.h}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$curses.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include $<$math.h$>$}\par
+{\ttfamily \#include \char`\"{}control.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}space\_\-ship.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}missile.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}alien.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}bomb.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}scores.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structobject__data__t}{object\_\-data\_\-t}
+\begin{DoxyCompactList}\small\item\em $>$ Struttura contenente le informazioni relative all'oggetto \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{space__invaders_8h_afa997965401af8f57189bd75ed84c3c0}{SLEEP\_\-UTIME}~50000
+\item 
+\#define \hyperlink{space__invaders_8h_a07fcf15197d070c11fec66c4cee7c440}{BOMB\_\-RAND\_\-MIN}~100
+\item 
+\#define \hyperlink{space__invaders_8h_a0301b6d0c750e7141b23d879c8625b5e}{BOMB\_\-RAND\_\-MAX}~200
+\item 
+\#define \hyperlink{space__invaders_8h_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\_\-WIDTH}~80
+\item 
+\hypertarget{space__invaders_8h_a6974d08a74da681b3957b2fead2608b8}{
+\#define {\bfseries SCREEN\_\-HEIGHT}~40}
+\label{space__invaders_8h_a6974d08a74da681b3957b2fead2608b8}
+
+\item 
+\#define \hyperlink{space__invaders_8h_aabe334216cc3799ba39ae24a084cbe22}{OBJECTS\_\-MAX}~50
+\item 
+\#define \hyperlink{space__invaders_8h_aed17f18d7d451ab44a553d83c3211c9d}{ALIEN\_\-NUM}~4
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{space__invaders_8h_a3af7baddc641a3b4f5a9189b589eccf7}{object\_\-type\_\-t} \{ \par
+{\bfseries OT\_\-SPACESHIP}, 
+{\bfseries OT\_\-ALIEN}, 
+{\bfseries OT\_\-BOMB}, 
+{\bfseries OT\_\-MISSILE}, 
+\par
+{\bfseries OT\_\-DELETE}
+ \}
+\item 
+enum \hyperlink{space__invaders_8h_ae9ae980041e438eed7a3af43ce4e9f6b}{direction\_\-t} \{ {\bfseries LEFT}, 
+{\bfseries RIGHT}
+ \}
+\begin{DoxyCompactList}\small\item\em $>$ Direzione \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definizioni globali del gioco
+
+\begin{DoxyDate}{Date}
+24 November 2011 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Davide Gessa (45712) 
+\end{DoxyAuthor}
+
+
+\subsection{Define Documentation}
+\hypertarget{space__invaders_8h_aed17f18d7d451ab44a553d83c3211c9d}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!ALIEN\_\-NUM@{ALIEN\_\-NUM}}
+\index{ALIEN\_\-NUM@{ALIEN\_\-NUM}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{ALIEN\_\-NUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define ALIEN\_\-NUM~4}}
+\label{space__invaders_8h_aed17f18d7d451ab44a553d83c3211c9d}
+Numero delle navicelle aliene \hypertarget{space__invaders_8h_a0301b6d0c750e7141b23d879c8625b5e}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!BOMB\_\-RAND\_\-MAX@{BOMB\_\-RAND\_\-MAX}}
+\index{BOMB\_\-RAND\_\-MAX@{BOMB\_\-RAND\_\-MAX}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{BOMB\_\-RAND\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define BOMB\_\-RAND\_\-MAX~200}}
+\label{space__invaders_8h_a0301b6d0c750e7141b23d879c8625b5e}
+Tempo di attesa massimo per il lancio di una bomba (iterazioni) \hypertarget{space__invaders_8h_a07fcf15197d070c11fec66c4cee7c440}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!BOMB\_\-RAND\_\-MIN@{BOMB\_\-RAND\_\-MIN}}
+\index{BOMB\_\-RAND\_\-MIN@{BOMB\_\-RAND\_\-MIN}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{BOMB\_\-RAND\_\-MIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define BOMB\_\-RAND\_\-MIN~100}}
+\label{space__invaders_8h_a07fcf15197d070c11fec66c4cee7c440}
+Tempo di attesa minimo per il lancio di una bomba (iterazioni) \hypertarget{space__invaders_8h_aabe334216cc3799ba39ae24a084cbe22}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!OBJECTS\_\-MAX@{OBJECTS\_\-MAX}}
+\index{OBJECTS\_\-MAX@{OBJECTS\_\-MAX}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{OBJECTS\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define OBJECTS\_\-MAX~50}}
+\label{space__invaders_8h_aabe334216cc3799ba39ae24a084cbe22}
+Numero massimo di oggetti nella scena \hypertarget{space__invaders_8h_a2cd109632a6dcccaa80b43561b1ab700}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!SCREEN\_\-WIDTH@{SCREEN\_\-WIDTH}}
+\index{SCREEN\_\-WIDTH@{SCREEN\_\-WIDTH}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{SCREEN\_\-WIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCREEN\_\-WIDTH~80}}
+\label{space__invaders_8h_a2cd109632a6dcccaa80b43561b1ab700}
+Dimensione del terminale \hypertarget{space__invaders_8h_afa997965401af8f57189bd75ed84c3c0}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!SLEEP\_\-UTIME@{SLEEP\_\-UTIME}}
+\index{SLEEP\_\-UTIME@{SLEEP\_\-UTIME}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{SLEEP\_\-UTIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define SLEEP\_\-UTIME~50000}}
+\label{space__invaders_8h_afa997965401af8f57189bd75ed84c3c0}
+Tempo di attesa tra le varie iterazioni 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{space__invaders_8h_a3af7baddc641a3b4f5a9189b589eccf7}{
+\index{space\_\-invaders.h@{space\_\-invaders.h}!object\_\-type\_\-t@{object\_\-type\_\-t}}
+\index{object\_\-type\_\-t@{object\_\-type\_\-t}!space_invaders.h@{space\_\-invaders.h}}
+\subsubsection[{object\_\-type\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf object\_\-type\_\-t}}}
+\label{space__invaders_8h_a3af7baddc641a3b4f5a9189b589eccf7}
+Tipi di oggetto presenti nel gioco
+
+OT\_\-DELETE indica al controllo che l'oggetto sta' morendo, e deve essere solo cancellato dallo schermo e non stampato 
