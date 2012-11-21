@@ -56,6 +56,10 @@ void clear_quad(int x, int y, int size)
 	int j;
 	
 	for(i = 0; i < size; i++)
+	{
 		for(j = 0; j < size; j++)
+		{
 			mvaddch(y+i, x+j, ' ');
+		}
+	}
 }
